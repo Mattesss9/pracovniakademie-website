@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -20,7 +22,6 @@ const nextConfig = {
   ],
   // https://github.com/vercel/next.js/issues/79588#issuecomment-2972850452
   experimental: {
-    preloadEntriesOnStart: false,
     webpackMemoryOptimizations: true,
   },
 }
