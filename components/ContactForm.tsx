@@ -17,6 +17,7 @@ export function ContactForm() {
     email: '',
     phone: '',
     position: '',
+    cooperation: '',
     experience: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -138,7 +139,21 @@ export function ContactForm() {
                     </Select>
                   </div>
                 </div>
-                
+
+                <div className="space-y-2">
+                  <Label htmlFor="cooperation">Spolupráce *</Label>
+                  <Select onValueChange={(value) => handleInputChange('cooperation', value)}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Vyberte typ spolupráce" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="osvc">OSVČ</SelectItem>
+                      <SelectItem value="hpp">HPP</SelectItem>
+                      <SelectItem value="dpp-dpc">DPP/DPČ</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="experience">Popište vaše zkušenosti a praxi</Label>
                   <Textarea
